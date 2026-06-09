@@ -1,0 +1,274 @@
+\documentclass[a4paper]{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\geometry{a4paper, margin=1.27cm}
+\usepackage{fontsize}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{2.1cm}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\rhead{\fontsize{11}{13.2}\selectfont\textbf{MOSFET Product Name}\par{\color{red}\rule{\textwidth}{0.5pt}}\par\vspace{3pt}\textbf{EnterVDSV N/P-Channel MOSFET}}
+\AddToShipoutPictureFG{%
+  \begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west, inner sep=5pt, fill=white]
+    at ([xshift=0.3cm, yshift=-0.2cm]current page.north west)
+    {\includegraphics[height=1.2cm]{assets/logo.pdf}};
+  \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{{\fontsize{10.5}{12.6}\selectfont\textbf{#1}}}
+\newcommand{\defaultsize}{\fontsize{9}{10.8}\selectfont}
+\newcommand{\smallnote}{\fontsize{7}{8.4}\selectfont}
+
+\defaultsize
+
+\begin{document}
+
+% PAGE 1
+\begin{multicols}{2}
+
+\sectiontitle{Product Summary}
+
+\defaultsize
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Parameter & Rating \\
+\hline
+VDS & 100V \\
+\hline
+ID @TC=25°C & Enter ID A \\
+\hline
+RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{12pt}
+
+\sectiontitle{Features}
+
+\defaultsize
+\begin{itemize}
+\item Low RDS(on) minimizes conduction losses and improving efficiency
+\item Low gate threshold voltage enables logic compatibility
+\item Excellent gate charge x RDS(on) product (FOM)
+\item Fast switching speed
+\item Dual Side Cooling package with low junction-top thermal resistance
+\item Gate-Source ESD Protected Up To 2KV (HBM)
+\end{itemize}
+
+\vspace{12pt}
+
+\sectiontitle{Applications}
+
+\defaultsize
+\begin{itemize}
+\item Application 1
+\item Application 2
+\item Application 3
+\end{itemize}
+
+\columnbreak
+
+\vspace{3.5cm}
+
+\sectiontitle{Picture Placeholder}
+
+\defaultsize
+\fbox{\begin{minipage}[c][4cm][c]{4cm}\centering\textit{[Image/Diagram]}\end{minipage}}
+
+\vspace{12pt}
+
+\sectiontitle{Mechanical Data}
+
+\defaultsize
+\begin{itemize}
+\item Package: [To be filled]
+\item Moisture Sensitivity: Level [To be filled], per J-STD-020
+\item Halogen Free. ``Green'' Device (Note1)
+\item Lead Free Finish, RoHS Compliant (Note2)
+\item Epoxy Meets UL 94 V-0 Flammability Rating
+\item Weight: xx g (approximate)
+\end{itemize}
+
+\end{multicols}
+
+\vspace{12pt}
+
+\sectiontitle{Body Marking and Pin Layout}
+
+\defaultsize
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Marking Code & Internal Structure \\
+\hline
+4 codes in total & YY = Year Code, WW = Week Code \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{12pt}
+
+\sectiontitle{Ordering Information}
+
+\defaultsize
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Orderable Part Number & Reel Size & Packaging Type & Qty/Reel \\
+\hline
+Product Name-TP & 7'' & Tape \& Reel & 3,000 \\
+\hline
+Product Name-13P & 13'' & Tape \& Reel & 10,000 \\
+\hline
+\end{tabular}
+\end{center}
+
+\smallnote
+\vspace{6pt}
+For packaging details, visit our website at https://www.mccsemi.com/Package/List
+
+% PAGE 2
+\newpage
+
+\sectiontitle{Maximum Ratings (TA=25°C unless otherwise specified)}
+
+\defaultsize
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Parameter & Symbol & Rating & Unit \\
+\hline
+Drain-Source Voltage & VDS & EnterVDS & V \\
+\hline
+Gate-Source Voltage & VGS & ±xx & V \\
+\hline
+Continuous Drain Current (TA=25°C, VGS=10V) & ID & xx & A \\
+\hline
+Pulsed Drain Current & IDM & xx & A \\
+\hline
+Total Power Dissipation (TA=25°C, VGS=10V) & PD & xx & W \\
+\hline
+Single Pulsed Avalanche Energy & EAS & xx & mJ \\
+\hline
+Avalanche Current & IAS & xx & A \\
+\hline
+Operating Junction and Storage Temperature Range & TJ, TSTG & -55 to +xxx & °C \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{12pt}
+
+\sectiontitle{Thermal Characteristics}
+
+\defaultsize
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Parameter & Symbol & Rating & Unit \\
+\hline
+Thermal Resistance from Junction to Ambient (Note 5) & R$\theta$JA & xx & $^\circ$C/W \\
+\hline
+Thermal Resistance from Junction to Case & R$\theta$JC & xx & $^\circ$C/W \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{12pt}
+
+\smallnote
+\sectiontitle{Notes:}
+
+\smallnote
+1. Halogen free ``Green'' products are defined as those which contain <900ppm bromine, <900ppm chlorine (<1500ppm total Br + Cl) and 1000ppm antimony compounds.
+
+2. High Temperature Solder Exemption Applied, see EU Directive Annex 7a.
+
+3. Repetitive rating; pulse width limited by max. junction temperature
+
+4. Pd is based on max. junction temperature, using junction-case thermal resistance.
+
+5. The value of R$\theta$JA is measured with the device mounted on 1in2 FR-4 board with 2oz. Copper, in a still air environment with TA =25$^\circ$C.
+
+% PAGE 3
+\newpage
+
+\sectiontitle{Electrical Characteristics (TA=25°C unless otherwise specified)}
+
+\defaultsize
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+Parameter & Symbol & Test Conditions & Min & Typ & Max & Unit \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Static Characteristics}} \\
+\hline
+Drain-Source Breakdown Voltage & V(BR)DSS & VGS=0V, ID=250µA & -- & -- & -- & V \\
+\hline
+Gate-Source Leakage Current & IGSS & VDS=0V, VGS = ±xxV & -- & -- & -- & nA \\
+\hline
+Zero Gate Voltage Drain Current & IDSS & VDS= xxV, VGS = 0V & -- & -- & -- & µA \\
+\hline
+Gate-Threshold Voltage & VGS(th) & VDS=VGS, ID=250µA & -- & -- & -- & V \\
+\hline
+Drain-Source On-Resistance & RDS(on) & VGS=10V, ID=xx A & -- & -- & -- & m$\Omega$ \\
+\hline
+Gate Resistance & Rg & F=1 MHz, Open drain & -- & -- & -- & $\Omega$ \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Diode Characteristics}} \\
+\hline
+Continuous Body Diode Current & IS & -- & -- & -- & -- & A \\
+\hline
+Diode Forward Voltage & VSD & VGS=0V, ID=xx A & -- & -- & -- & V \\
+\hline
+Reverse Recovery Time & trr & IF=xx A, dIF/dt=xx A/µs & -- & -- & -- & ns \\
+\hline
+Reverse Recovery Charge & Qrr & -- & -- & -- & -- & nC \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Dynamic Characteristics}} \\
+\hline
+Input Capacitance & Ciss & VDS= xxV, VGS=0V, f=1MHz & -- & -- & -- & pF \\
+\hline
+Output Capacitance & Coss & -- & -- & -- & -- & pF \\
+\hline
+Reverse Transfer Capacitance & Crss & -- & -- & -- & -- & pF \\
+\hline
+Total Gate Charge & Qg & VDS= xxV, VGS=xxV, ID=xx A & -- & -- & -- & nC \\
+\hline
+Gate-Source Charge & Qgs & -- & -- & -- & -- & nC \\
+\hline
+Gate-Drain Charge & Qgd & -- & -- & -- & -- & nC \\
+\hline
+Turn-On Delay Time & td(on) & VDD= xxV, VGS= xxV, RG=xx$\Omega$ & -- & -- & -- & ns \\
+\hline
+Turn-On Rise Time & tr & -- & -- & -- & -- & ns \\
+\hline
+Turn-Off Delay Time & td(off) & -- & -- & -- & -- & ns \\
+\hline
+Turn-Off Fall Time & tf & -- & -- & -- & -- & ns \\
+\hline
+\end{tabular}
+\end{center}
+
+% PAGE 4
+\newpage
+
+\sectiontitle{Curve Characteristics}
+
+\defaultsize
+[Curve plots will be added here]
+
+\end{document}
