@@ -3,11 +3,18 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 \usepackage{geometry}
 \geometry{a4paper, margin=1.27cm}
 \usepackage{fontsize}
 \usepackage{multicol}
 \usepackage{xcolor}
+\usepackage{colortbl}
+\definecolor{tableheader}{HTML}{BFBFBF}
+\definecolor{tableborder}{HTML}{999999}
+\arrayrulecolor{tableborder}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -26,6 +33,8 @@
   \end{tikzpicture}%
 }
 
+\renewcommand{\arraystretch}{1.5}
+
 \newcommand{\sectiontitle}[1]{{\fontsize{10.5}{12.6}\selectfont\textbf{#1}}}
 \newcommand{\defaultsize}{\fontsize{9}{10.8}\selectfont}
 \newcommand{\smallnote}{\fontsize{7}{8.4}\selectfont}
@@ -41,9 +50,9 @@
 
 \defaultsize
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabularx}{\linewidth}{|C|C|}
 \hline
-Parameter & Rating \\
+\rowcolor{tableheader} \textbf{Parameter} & \textbf{Rating} \\
 \hline
 VDS & 100V \\
 \hline
@@ -51,7 +60,7 @@ ID @TC=25°C & Enter ID A \\
 \hline
 RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \vspace{12pt}
@@ -110,13 +119,13 @@ RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
 
 \defaultsize
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabularx}{\linewidth}{|C|C|}
 \hline
-Marking Code & Internal Structure \\
+\rowcolor{tableheader} \textbf{Marking Code} & \textbf{Internal Structure} \\
 \hline
 4 codes in total & YY = Year Code, WW = Week Code \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \vspace{12pt}
@@ -125,15 +134,15 @@ Marking Code & Internal Structure \\
 
 \defaultsize
 \begin{center}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabularx}{\linewidth}{|L|c|c|c|}
 \hline
-Orderable Part Number & Reel Size & Packaging Type & Qty/Reel \\
+\rowcolor{tableheader} \textbf{Orderable Part Number} & \textbf{Reel Size} & \textbf{Packaging Type} & \textbf{Qty/Reel} \\
 \hline
 Product Name-TP & 7'' & Tape \& Reel & 3,000 \\
 \hline
 Product Name-13P & 13'' & Tape \& Reel & 10,000 \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \smallnote
@@ -147,27 +156,27 @@ For packaging details, visit our website at https://www.mccsemi.com/Package/List
 
 \defaultsize
 \begin{center}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabularx}{\linewidth}{|L|L|c|c|c|}
 \hline
-Parameter & Symbol & Rating & Unit \\
+\rowcolor{tableheader} \textbf{Parameter} & \textbf{Conditions} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
-Drain-Source Voltage & VDS & EnterVDS & V \\
+Drain-Source Voltage & -- & VDS & EnterVDS & V \\
 \hline
-Gate-Source Voltage & VGS & ±xx & V \\
+Gate-Source Voltage & -- & VGS & ±xx & V \\
 \hline
-Continuous Drain Current (TA=25°C, VGS=10V) & ID & xx & A \\
+Continuous Drain Current & TA=25°C, VGS=10V & ID & xx & A \\
 \hline
-Pulsed Drain Current & IDM & xx & A \\
+Pulsed Drain Current & -- & IDM & xx & A \\
 \hline
-Total Power Dissipation (TA=25°C, VGS=10V) & PD & xx & W \\
+Total Power Dissipation & TA=25°C, VGS=10V & PD & xx & W \\
 \hline
-Single Pulsed Avalanche Energy & EAS & xx & mJ \\
+Single Pulsed Avalanche Energy & -- & EAS & xx & mJ \\
 \hline
-Avalanche Current & IAS & xx & A \\
+Avalanche Current & -- & IAS & xx & A \\
 \hline
-Operating Junction and Storage Temperature Range & TJ, TSTG & -55 to +xxx & °C \\
+Operating Junction and Storage Temperature Range & -- & TJ, TSTG & -55 to +xxx & °C \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \vspace{12pt}
@@ -176,15 +185,15 @@ Operating Junction and Storage Temperature Range & TJ, TSTG & -55 to +xxx & °C 
 
 \defaultsize
 \begin{center}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabularx}{\linewidth}{|L|c|c|c|}
 \hline
-Parameter & Symbol & Rating & Unit \\
+\rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
 Thermal Resistance from Junction to Ambient (Note 5) & R$\theta$JA & xx & $^\circ$C/W \\
 \hline
 Thermal Resistance from Junction to Case & R$\theta$JC & xx & $^\circ$C/W \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \vspace{12pt}
@@ -210,11 +219,11 @@ Thermal Resistance from Junction to Case & R$\theta$JC & xx & $^\circ$C/W \\
 
 \defaultsize
 \begin{center}
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\begin{tabularx}{\linewidth}{|L|c|L|c|c|c|c|}
 \hline
-Parameter & Symbol & Test Conditions & Min & Typ & Max & Unit \\
+\rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Test Conditions} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Unit} \\
 \hline
-\multicolumn{7}{|c|}{\textbf{Static Characteristics}} \\
+\rowcolor{tableheader} \multicolumn{7}{|c|}{\textbf{Static Characteristics}} \\
 \hline
 Drain-Source Breakdown Voltage & V(BR)DSS & VGS=0V, ID=250µA & -- & -- & -- & V \\
 \hline
@@ -228,7 +237,7 @@ Drain-Source On-Resistance & RDS(on) & VGS=10V, ID=xx A & -- & -- & -- & m$\Omeg
 \hline
 Gate Resistance & Rg & F=1 MHz, Open drain & -- & -- & -- & $\Omega$ \\
 \hline
-\multicolumn{7}{|c|}{\textbf{Diode Characteristics}} \\
+\rowcolor{tableheader} \multicolumn{7}{|c|}{\textbf{Diode Characteristics}} \\
 \hline
 Continuous Body Diode Current & IS & -- & -- & -- & -- & A \\
 \hline
@@ -238,7 +247,7 @@ Reverse Recovery Time & trr & IF=xx A, dIF/dt=xx A/µs & -- & -- & -- & ns \\
 \hline
 Reverse Recovery Charge & Qrr & -- & -- & -- & -- & nC \\
 \hline
-\multicolumn{7}{|c|}{\textbf{Dynamic Characteristics}} \\
+\rowcolor{tableheader} \multicolumn{7}{|c|}{\textbf{Dynamic Characteristics}} \\
 \hline
 Input Capacitance & Ciss & VDS= xxV, VGS=0V, f=1MHz & -- & -- & -- & pF \\
 \hline
@@ -260,7 +269,7 @@ Turn-Off Delay Time & td(off) & -- & -- & -- & -- & ns \\
 \hline
 Turn-Off Fall Time & tf & -- & -- & -- & -- & ns \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 % PAGE 4
