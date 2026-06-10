@@ -41,9 +41,10 @@
 
 \renewcommand{\arraystretch}{1.5}
 \setlength{\parindent}{0pt}
+\setlength{\columnsep}{42pt}
 
 \newcommand{\sectiontitle}[1]{{\fontsize{10}{12.6}\selectfont\textbf{#1}}}
-\newcommand{\defaultsize}{\fontsize{9}{10.8}\selectfont}
+\newcommand{\defaultsize}{\fontsize{9}{12}\selectfont}
 \newcommand{\smallnote}{\fontsize{7}{8.4}\selectfont}
 
 \defaultsize
@@ -52,6 +53,7 @@
 
 % PAGE 1
 \begin{multicols}{2}
+\raggedcolumns
 
 \sectiontitle{Product Summary}
 
@@ -99,11 +101,11 @@ R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} m$\Omega$ @ V\textsubscrip
 
 \defaultsize
 \begin{center}
-\includegraphics[width=4cm]{assets/DFN5060.png}\\[6pt]
-\sectiontitle{DFN5060}
-\vspace{10pt}
+\includegraphics[height=4.65cm]{assets/DFN5060.png}\\
+\fontsize{9}{0}\selectfont\textbf{DNF5060}
+\vspace{14pt}
 
-\includegraphics[width=1cm]{assets/hal-free.png}\hspace{0.5cm}\includegraphics[width=1cm]{assets/rohs.png}\hspace{0.5cm}\includegraphics[width=1cm]{assets/pb-free.png}
+\includegraphics[width=1.25cm]{assets/rohs.png}\hspace{0.05cm}\includegraphics[width=1.25cm]{assets/pb-free.png}\hspace{0.05cm}\includegraphics[width=1.25cm]{assets/hal-free.png}
 \end{center}
 
 \vspace{12pt}
@@ -132,7 +134,7 @@ R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} m$\Omega$ @ V\textsubscrip
 \hline
 \rowcolor{tableheader} \textbf{Marking Code} & \textbf{Internal Structure} \\
 \hline
-4 codes in total & YY = Year Code, WW = Week Code \\
+4 codes in total \\ YY = Year Code, WW = Week Code & \\
 \hline
 \end{tabularx}
 \end{center}
