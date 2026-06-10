@@ -6,10 +6,14 @@
 \usepackage{tabularx}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
+\newcolumntype{Q}[1]{>{\centering\arraybackslash\hsize=#1\hsize}X}
 \usepackage{geometry}
 \geometry{a4paper, margin=1.27cm}
 \usepackage{fontsize}
 \usepackage{multicol}
+\usepackage{enumitem}
+\setlist[itemize]{topsep=3pt, itemsep=2pt, parsep=0pt, partopsep=0pt}
 \usepackage{xcolor}
 \usepackage{colortbl}
 \definecolor{tableheader}{HTML}{BFBFBF}
@@ -24,7 +28,7 @@
 \setlength{\headheight}{2.1cm}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\rhead{\fontsize{11}{13.2}\selectfont\textbf{MOSFET Product Name}\par{\color{red}\rule{\textwidth}{0.5pt}}\par\vspace{3pt}\textbf{EnterVDSV N/P-Channel MOSFET}}
+\rhead{\fontsize{11}{13.2}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\textwidth}{0.5pt}}\par\vspace{3pt}\textbf{150 N-Channel MOSFET}}
 \AddToShipoutPictureFG{%
   \begin{tikzpicture}[remember picture, overlay]
   \node[anchor=north west, inner sep=5pt, fill=white]
@@ -34,6 +38,7 @@
 }
 
 \renewcommand{\arraystretch}{1.5}
+\setlength{\parindent}{0pt}
 
 \newcommand{\sectiontitle}[1]{{\fontsize{10.5}{12.6}\selectfont\textbf{#1}}}
 \newcommand{\defaultsize}{\fontsize{9}{10.8}\selectfont}
@@ -134,7 +139,7 @@ RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|L|c|c|c|}
+\begin{tabularx}{\linewidth}{|P{1.3457}|P{0.8848}|P{0.8848}|P{0.8848}|}
 \hline
 \rowcolor{tableheader} \textbf{Orderable Part Number} & \textbf{Reel Size} & \textbf{Packaging Type} & \textbf{Qty/Reel} \\
 \hline
@@ -156,9 +161,9 @@ For packaging details, visit our website at https://www.mccsemi.com/Package/List
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|L|L|c|c|c|}
+\begin{tabularx}{\linewidth}{|P{2.1361}|P{1.0264}|Q{0.5118}|Q{0.8540}|Q{0.4715}|}
 \hline
-\rowcolor{tableheader} \textbf{Parameter} & \textbf{Conditions} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
+\rowcolor{tableheader} \multicolumn{2}{|l|}{\textbf{Parameter}} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
 Drain-Source Voltage & -- & VDS & EnterVDS & V \\
 \hline
@@ -185,7 +190,7 @@ Operating Junction and Storage Temperature Range & -- & TJ, TSTG & -55 to +xxx &
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|L|c|c|c|}
+\begin{tabularx}{\linewidth}{|P{2.5302}|Q{0.4095}|Q{0.6832}|Q{0.3772}|}
 \hline
 \rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
@@ -199,9 +204,8 @@ Thermal Resistance from Junction to Case & R$\theta$JC & xx & $^\circ$C/W \\
 \vspace{12pt}
 
 \smallnote
-\sectiontitle{Notes:}
+Notes:
 
-\smallnote
 1. Halogen free ``Green'' products are defined as those which contain <900ppm bromine, <900ppm chlorine (<1500ppm total Br + Cl) and 1000ppm antimony compounds.
 
 2. High Temperature Solder Exemption Applied, see EU Directive Annex 7a.
@@ -219,11 +223,11 @@ Thermal Resistance from Junction to Case & R$\theta$JC & xx & $^\circ$C/W \\
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|L|c|L|c|c|c|c|}
+\begin{tabularx}{\linewidth}{|P{2.1076}|Q{0.6658}|P{2.0201}|Q{0.5707}|Q{0.5707}|Q{0.5707}|Q{0.4946}|}
 \hline
 \rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Test Conditions} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Unit} \\
 \hline
-\rowcolor{tableheader} \multicolumn{7}{|c|}{\textbf{Static Characteristics}} \\
+\multicolumn{7}{|l|}{\textbf{Static Characteristics}} \\
 \hline
 Drain-Source Breakdown Voltage & V(BR)DSS & VGS=0V, ID=250µA & -- & -- & -- & V \\
 \hline
@@ -237,7 +241,7 @@ Drain-Source On-Resistance & RDS(on) & VGS=10V, ID=xx A & -- & -- & -- & m$\Omeg
 \hline
 Gate Resistance & Rg & F=1 MHz, Open drain & -- & -- & -- & $\Omega$ \\
 \hline
-\rowcolor{tableheader} \multicolumn{7}{|c|}{\textbf{Diode Characteristics}} \\
+\multicolumn{7}{|l|}{\textbf{Diode Characteristics}} \\
 \hline
 Continuous Body Diode Current & IS & -- & -- & -- & -- & A \\
 \hline
@@ -247,7 +251,7 @@ Reverse Recovery Time & trr & IF=xx A, dIF/dt=xx A/µs & -- & -- & -- & ns \\
 \hline
 Reverse Recovery Charge & Qrr & -- & -- & -- & -- & nC \\
 \hline
-\rowcolor{tableheader} \multicolumn{7}{|c|}{\textbf{Dynamic Characteristics}} \\
+\multicolumn{7}{|l|}{\textbf{Dynamic Characteristics}} \\
 \hline
 Input Capacitance & Ciss & VDS= xxV, VGS=0V, f=1MHz & -- & -- & -- & pF \\
 \hline
