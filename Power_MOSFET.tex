@@ -98,7 +98,10 @@ R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} m$\Omega$ @ V\textsubscrip
 \columnbreak
 
 \defaultsize
-\fbox{\begin{minipage}[c][4cm][c]{4cm}\centering\textit{[Image/Diagram]}\end{minipage}}
+\begin{center}
+\includegraphics[width=4cm]{assets/DFN5060.png}\\[6pt]
+\includegraphics[width=1cm]{assets/hal-free.png}\hspace{0.5cm}\includegraphics[width=1cm]{assets/rohs.png}\hspace{0.5cm}\includegraphics[width=1cm]{assets/pb-free.png}
+\end{center}
 
 \vspace{12pt}
 
@@ -162,21 +165,21 @@ For packaging details, visit our website at \underline{\href{https://www.mccsemi
 \hline
 \rowcolor{tableheader} \multicolumn{2}{|l|}{\textbf{Parameter}} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
-Drain-Source Voltage & -- & V\textsubscript{DS} & EnterV\textsubscript{DS} & V \\
+Drain-Source Voltage & & V\textsubscript{DS} & EnterV\textsubscript{DS} & V \\
 \hline
-Gate-Source Voltage & -- & V\textsubscript{GS} & ±xx & V \\
+Gate-Source Voltage & & V\textsubscript{GS} & ±xx & V \\
 \hline
 Continuous Drain Current & T\textsubscript{A}=25°C, V\textsubscript{GS}=10V & I\textsubscript{D} & xx & A \\
 \hline
-Pulsed Drain Current \textsuperscript{(Note 5)} & -- & I\textsubscript{DM} & xx & A \\
+Pulsed Drain Current \textsuperscript{(Note 5)} & & I\textsubscript{DM} & xx & A \\
 \hline
 Total Power Dissipation & T\textsubscript{A}=25°C, V\textsubscript{GS}=10V & P\textsubscript{D} & xx & W \\
 \hline
-Single Pulsed Avalanche Energy & -- & E\textsubscript{AS} & xx & mJ \\
+Single Pulsed Avalanche Energy & & E\textsubscript{AS} & xx & mJ \\
 \hline
-Avalanche Current & -- & I\textsubscript{AS} & xx & A \\
+Avalanche Current & & I\textsubscript{AS} & xx & A \\
 \hline
-Operating Junction and Storage Temperature Range & -- & T\textsubscript{J}, T\textsubscript{STG} & -55 to +xxx & °C \\
+Operating Junction and Storage Temperature Range & & T\textsubscript{J}, T\textsubscript{STG} & -55 to +xxx & °C \\
 \hline
 \end{tabularx}
 \end{center}
@@ -226,49 +229,49 @@ Notes:
 \hline
 \multicolumn{7}{|l|}{\textbf{Static Characteristics}} \\
 \hline
-Drain-Source Breakdown Voltage & V\textsubscript{(BR)DSS} & V\textsubscript{GS}=0V, I\textsubscript{D}=250µA & -- & -- & -- & V \\
+Drain-Source Breakdown Voltage & V\textsubscript{(BR)DSS} & V\textsubscript{GS}=0V, I\textsubscript{D}=250µA & & & & V \\
 \hline
-Gate-Source Leakage Current & I\textsubscript{GSS} & V\textsubscript{DS}=0V, V\textsubscript{GS} = ±xxV & -- & -- & -- & nA \\
+Gate-Source Leakage Current & I\textsubscript{GSS} & V\textsubscript{DS}=0V, V\textsubscript{GS} = ±xxV & & & & nA \\
 \hline
-Zero Gate Voltage Drain Current & I\textsubscript{DSS} & V\textsubscript{DS}= xxV, V\textsubscript{GS} = 0V & -- & -- & -- & µA \\
+Zero Gate Voltage Drain Current & I\textsubscript{DSS} & V\textsubscript{DS}= xxV, V\textsubscript{GS} = 0V & & & & µA \\
 \hline
-Gate-Threshold Voltage & V\textsubscript{GS(th)} & V\textsubscript{DS}=V\textsubscript{GS}, I\textsubscript{D}=250µA & -- & -- & -- & V \\
+Gate-Threshold Voltage & V\textsubscript{GS(th)} & V\textsubscript{DS}=V\textsubscript{GS}, I\textsubscript{D}=250µA & & & & V \\
 \hline
-Drain-Source On-Resistance & R\textsubscript{DS(on)} & V\textsubscript{GS}=10V, I\textsubscript{D}=xx A & -- & -- & -- & m$\Omega$ \\
+Drain-Source On-Resistance & R\textsubscript{DS(on)} & V\textsubscript{GS}=10V, I\textsubscript{D}=xx A & & & & m$\Omega$ \\
 \hline
-Gate Resistance & R\textsubscript{g} & F=1 MHz, Open drain & -- & -- & -- & $\Omega$ \\
+Gate Resistance & R\textsubscript{g} & F=1 MHz, Open drain & & & & $\Omega$ \\
 \hline
 \multicolumn{7}{|l|}{\textbf{Diode Characteristics}} \\
 \hline
-Continuous Body Diode Current & I\textsubscript{S} & -- & -- & -- & -- & A \\
+Continuous Body Diode Current & I\textsubscript{S} & & & & & A \\
 \hline
-Diode Forward Voltage & V\textsubscript{SD} & V\textsubscript{GS}=0V, I\textsubscript{D}=xx A & -- & -- & -- & V \\
+Diode Forward Voltage & V\textsubscript{SD} & V\textsubscript{GS}=0V, I\textsubscript{D}=xx A & & & & V \\
 \hline
-Reverse Recovery Time & t\textsubscript{rr} & I\textsubscript{F}=xx A, dI\textsubscript{F}/dt=xx A/µs & -- & -- & -- & ns \\
+Reverse Recovery Time & t\textsubscript{rr} & I\textsubscript{F}=xx A, dI\textsubscript{F}/dt=xx A/µs & & & & ns \\
 \hline
-Reverse Recovery Charge & Q\textsubscript{rr} & -- & -- & -- & -- & nC \\
+Reverse Recovery Charge & Q\textsubscript{rr} & & & & & nC \\
 \hline
 \multicolumn{7}{|l|}{\textbf{Dynamic Characteristics}} \\
 \hline
-Input Capacitance & C\textsubscript{iss} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=0V, f=1MHz & -- & -- & -- & pF \\
+Input Capacitance & C\textsubscript{iss} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=0V, f=1MHz & & & & pF \\
 \hline
-Output Capacitance & C\textsubscript{oss} & -- & -- & -- & -- & pF \\
+Output Capacitance & C\textsubscript{oss} & & & & & pF \\
 \hline
-Reverse Transfer Capacitance & C\textsubscript{rss} & -- & -- & -- & -- & pF \\
+Reverse Transfer Capacitance & C\textsubscript{rss} & & & & & pF \\
 \hline
-Total Gate Charge & Q\textsubscript{g} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=xxV, I\textsubscript{D}=xx A & -- & -- & -- & nC \\
+Total Gate Charge & Q\textsubscript{g} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=xxV, I\textsubscript{D}=xx A & & & & nC \\
 \hline
-Gate-Source Charge & Q\textsubscript{gs} & -- & -- & -- & -- & nC \\
+Gate-Source Charge & Q\textsubscript{gs} & & & & & nC \\
 \hline
-Gate-Drain Charge & Q\textsubscript{gd} & -- & -- & -- & -- & nC \\
+Gate-Drain Charge & Q\textsubscript{gd} & & & & & nC \\
 \hline
-Turn-On Delay Time & t\textsubscript{d(on)} & V\textsubscript{DD}= xxV, V\textsubscript{GS}= xxV, R\textsubscript{G}=xx$\Omega$ & -- & -- & -- & ns \\
+Turn-On Delay Time & t\textsubscript{d(on)} & V\textsubscript{DD}= xxV, V\textsubscript{GS}= xxV, R\textsubscript{G}=xx$\Omega$ & & & & ns \\
 \hline
-Turn-On Rise Time & t\textsubscript{r} & -- & -- & -- & -- & ns \\
+Turn-On Rise Time & t\textsubscript{r} & & & & & ns \\
 \hline
-Turn-Off Delay Time & t\textsubscript{d(off)} & -- & -- & -- & -- & ns \\
+Turn-Off Delay Time & t\textsubscript{d(off)} & & & & & ns \\
 \hline
-Turn-Off Fall Time & t\textsubscript{f} & -- & -- & -- & -- & ns \\
+Turn-Off Fall Time & t\textsubscript{f} & & & & & ns \\
 \hline
 \end{tabularx}
 \end{center}
