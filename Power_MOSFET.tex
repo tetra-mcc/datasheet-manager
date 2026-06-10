@@ -9,7 +9,7 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
 \newcolumntype{Q}[1]{>{\centering\arraybackslash\hsize=#1\hsize}X}
 \usepackage{geometry}
-\geometry{a4paper, top=0.95cm, bottom=1.27cm, left=1.27cm, right=1.55cm, headsep=12pt}
+\geometry{a4paper, top=0.95cm, bottom=1.27cm, left=1.27cm, right=1.27cm, headsep=12pt}
 \usepackage{fontsize}
 \usepackage{multicol}
 \usepackage{enumitem}
@@ -30,7 +30,8 @@
 \setlength{\headheight}{2cm}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\rhead{\fontsize{11}{10}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\dimexpr\textwidth+0.4cm\relax}{0.5pt}}\par\vspace{6pt}\textbf{150 N-Channel MOSFET}}
+\fancyheadoffset[R]{-0.28cm}
+\rhead{\fontsize{11}{10}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\dimexpr\headwidth+0.4cm\relax}{0.5pt}}\par\vspace{6pt}\textbf{150 N-Channel MOSFET}}
 \AddToShipoutPictureFG{%
   \begin{tikzpicture}[remember picture, overlay]
   \node[anchor=north west, inner sep=5pt, fill=white]
