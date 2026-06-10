@@ -9,7 +9,7 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
 \newcolumntype{Q}[1]{>{\centering\arraybackslash\hsize=#1\hsize}X}
 \usepackage{geometry}
-\geometry{a4paper, margin=1.27cm}
+\geometry{a4paper, margin=1.27cm, right=1.55cm}
 \usepackage{fontsize}
 \usepackage{multicol}
 \usepackage{enumitem}
@@ -27,15 +27,15 @@
 \hypersetup{colorlinks=true, urlcolor=blue}
 \pagestyle{fancy}
 \fancyhf{}
-\setlength{\headheight}{2.1cm}
+\setlength{\headheight}{2cm}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\rhead{\fontsize{11}{13.2}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\textwidth}{0.5pt}}\par\vspace{3pt}\textbf{150 N-Channel MOSFET}}
+\rhead{\fontsize{11}{11}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\textwidth}{0.5pt}}\par\vspace{3pt}\textbf{150 N-Channel MOSFET}}
 \AddToShipoutPictureFG{%
   \begin{tikzpicture}[remember picture, overlay]
   \node[anchor=north west, inner sep=5pt, fill=white]
-    at ([xshift=0.3cm, yshift=-0.2cm]current page.north west)
-    {\includegraphics[height=1.2cm]{assets/logo.pdf}};
+    at ([xshift=0.85cm, yshift=-0.35cm]current page.north west)
+    {\includegraphics[height=1.1cm]{assets/logo.pdf}};
   \end{tikzpicture}%
 }
 
