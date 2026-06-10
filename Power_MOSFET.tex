@@ -9,7 +9,7 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
 \newcolumntype{Q}[1]{>{\centering\arraybackslash\hsize=#1\hsize}X}
 \usepackage{geometry}
-\geometry{a4paper, margin=1.27cm, right=1.55cm}
+\geometry{a4paper, top=0.95cm, bottom=1.27cm, left=1.27cm, right=1.55cm, headsep=12pt}
 \usepackage{fontsize}
 \usepackage{multicol}
 \usepackage{enumitem}
@@ -30,19 +30,19 @@
 \setlength{\headheight}{2cm}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\rhead{\fontsize{11}{11}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\dimexpr\textwidth+0.4cm\relax}{0.5pt}}\par\vspace{3pt}\textbf{150 N-Channel MOSFET}}
+\rhead{\fontsize{11}{10}\selectfont\textbf{MCAC010N15YH}\par{\color{red}\rule{\dimexpr\textwidth+0.4cm\relax}{0.5pt}}\par\vspace{6pt}\textbf{150 N-Channel MOSFET}}
 \AddToShipoutPictureFG{%
   \begin{tikzpicture}[remember picture, overlay]
   \node[anchor=north west, inner sep=5pt, fill=white]
-    at ([xshift=0.85cm, yshift=-0.35cm]current page.north west)
-    {\includegraphics[height=1.1cm]{assets/logo.pdf}};
+    at ([xshift=0.86cm, yshift=-0.4cm]current page.north west)
+    {\includegraphics[height=1.11cm]{assets/logo.pdf}};
   \end{tikzpicture}%
 }
 
 \renewcommand{\arraystretch}{1.5}
 \setlength{\parindent}{0pt}
 
-\newcommand{\sectiontitle}[1]{{\fontsize{10.5}{12.6}\selectfont\textbf{#1}}}
+\newcommand{\sectiontitle}[1]{{\fontsize{10}{12.6}\selectfont\textbf{#1}}}
 \newcommand{\defaultsize}{\fontsize{9}{10.8}\selectfont}
 \newcommand{\smallnote}{\fontsize{7}{8.4}\selectfont}
 
@@ -100,6 +100,9 @@ R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} m$\Omega$ @ V\textsubscrip
 \defaultsize
 \begin{center}
 \includegraphics[width=4cm]{assets/DFN5060.png}\\[6pt]
+\sectiontitle{DFN5060}
+\vspace{10pt}
+
 \includegraphics[width=1cm]{assets/hal-free.png}\hspace{0.5cm}\includegraphics[width=1cm]{assets/rohs.png}\hspace{0.5cm}\includegraphics[width=1cm]{assets/pb-free.png}
 \end{center}
 
