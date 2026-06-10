@@ -23,6 +23,8 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{eso-pic}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
 \pagestyle{fancy}
 \fancyhf{}
 \setlength{\headheight}{2.1cm}
@@ -59,11 +61,11 @@
 \hline
 \rowcolor{tableheader} \textbf{Parameter} & \textbf{Rating} \\
 \hline
-VDS & 100V \\
+V\textsubscript{DS} & 100V \\
 \hline
-ID @TC=25°C & Enter ID A \\
+I\textsubscript{D} @T\textsubscript{C}=25°C & Enter I\textsubscript{D} A \\
 \hline
-RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
+R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} m$\Omega$ @ V\textsubscript{GS} = xxV \\
 \hline
 \end{tabularx}
 \end{center}
@@ -95,10 +97,6 @@ RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
 
 \columnbreak
 
-\vspace{3.5cm}
-
-\sectiontitle{Picture Placeholder}
-
 \defaultsize
 \fbox{\begin{minipage}[c][4cm][c]{4cm}\centering\textit{[Image/Diagram]}\end{minipage}}
 
@@ -110,8 +108,8 @@ RDS(on) Max & Rdson m$\Omega$ @ VGS = xxV \\
 \begin{itemize}
 \item Package: [To be filled]
 \item Moisture Sensitivity: Level [To be filled], per J-STD-020
-\item Halogen Free. ``Green'' Device (Note1)
-\item Lead Free Finish, RoHS Compliant (Note2)
+\item Halogen Free. ``Green'' Device \textsuperscript{(Note1)}
+\item Lead Free Finish, RoHS Compliant \textsuperscript{(Note2)}
 \item Epoxy Meets UL 94 V-0 Flammability Rating
 \item Weight: xx g (approximate)
 \end{itemize}
@@ -151,8 +149,7 @@ Product Name-13P & 13'' & Tape \& Reel & 10,000 \\
 \end{center}
 
 \smallnote
-\vspace{6pt}
-For packaging details, visit our website at https://www.mccsemi.com/Package/List
+For packaging details, visit our website at \underline{\href{https://www.mccsemi.com/Package/List}{https://www.mccsemi.com/Package/List}}
 
 % PAGE 2
 \newpage
@@ -165,21 +162,21 @@ For packaging details, visit our website at https://www.mccsemi.com/Package/List
 \hline
 \rowcolor{tableheader} \multicolumn{2}{|l|}{\textbf{Parameter}} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
-Drain-Source Voltage & -- & VDS & EnterVDS & V \\
+Drain-Source Voltage & -- & V\textsubscript{DS} & EnterV\textsubscript{DS} & V \\
 \hline
-Gate-Source Voltage & -- & VGS & ±xx & V \\
+Gate-Source Voltage & -- & V\textsubscript{GS} & ±xx & V \\
 \hline
-Continuous Drain Current & TA=25°C, VGS=10V & ID & xx & A \\
+Continuous Drain Current & T\textsubscript{A}=25°C, V\textsubscript{GS}=10V & I\textsubscript{D} & xx & A \\
 \hline
-Pulsed Drain Current & -- & IDM & xx & A \\
+Pulsed Drain Current \textsuperscript{(Note 5)} & -- & I\textsubscript{DM} & xx & A \\
 \hline
-Total Power Dissipation & TA=25°C, VGS=10V & PD & xx & W \\
+Total Power Dissipation & T\textsubscript{A}=25°C, V\textsubscript{GS}=10V & P\textsubscript{D} & xx & W \\
 \hline
-Single Pulsed Avalanche Energy & -- & EAS & xx & mJ \\
+Single Pulsed Avalanche Energy & -- & E\textsubscript{AS} & xx & mJ \\
 \hline
-Avalanche Current & -- & IAS & xx & A \\
+Avalanche Current & -- & I\textsubscript{AS} & xx & A \\
 \hline
-Operating Junction and Storage Temperature Range & -- & TJ, TSTG & -55 to +xxx & °C \\
+Operating Junction and Storage Temperature Range & -- & T\textsubscript{J}, T\textsubscript{STG} & -55 to +xxx & °C \\
 \hline
 \end{tabularx}
 \end{center}
@@ -194,9 +191,9 @@ Operating Junction and Storage Temperature Range & -- & TJ, TSTG & -55 to +xxx &
 \hline
 \rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
-Thermal Resistance from Junction to Ambient (Note 5) & R$\theta$JA & xx & $^\circ$C/W \\
+Thermal Resistance from Junction to Ambient \textsuperscript{(Note 5)} & R\textsubscript{$\theta$JA} & xx & $^\circ$C/W \\
 \hline
-Thermal Resistance from Junction to Case & R$\theta$JC & xx & $^\circ$C/W \\
+Thermal Resistance from Junction to Case & R\textsubscript{$\theta$JC} & xx & $^\circ$C/W \\
 \hline
 \end{tabularx}
 \end{center}
@@ -214,7 +211,7 @@ Notes:
 
 4. Pd is based on max. junction temperature, using junction-case thermal resistance.
 
-5. The value of R$\theta$JA is measured with the device mounted on 1in2 FR-4 board with 2oz. Copper, in a still air environment with TA =25$^\circ$C.
+5. The value of R\textsubscript{$\theta$JA} is measured with the device mounted on 1in2 FR-4 board with 2oz. Copper, in a still air environment with T\textsubscript{A}=25$^\circ$C.
 
 % PAGE 3
 \newpage
@@ -229,49 +226,49 @@ Notes:
 \hline
 \multicolumn{7}{|l|}{\textbf{Static Characteristics}} \\
 \hline
-Drain-Source Breakdown Voltage & V(BR)DSS & VGS=0V, ID=250µA & -- & -- & -- & V \\
+Drain-Source Breakdown Voltage & V\textsubscript{(BR)DSS} & V\textsubscript{GS}=0V, I\textsubscript{D}=250µA & -- & -- & -- & V \\
 \hline
-Gate-Source Leakage Current & IGSS & VDS=0V, VGS = ±xxV & -- & -- & -- & nA \\
+Gate-Source Leakage Current & I\textsubscript{GSS} & V\textsubscript{DS}=0V, V\textsubscript{GS} = ±xxV & -- & -- & -- & nA \\
 \hline
-Zero Gate Voltage Drain Current & IDSS & VDS= xxV, VGS = 0V & -- & -- & -- & µA \\
+Zero Gate Voltage Drain Current & I\textsubscript{DSS} & V\textsubscript{DS}= xxV, V\textsubscript{GS} = 0V & -- & -- & -- & µA \\
 \hline
-Gate-Threshold Voltage & VGS(th) & VDS=VGS, ID=250µA & -- & -- & -- & V \\
+Gate-Threshold Voltage & V\textsubscript{GS(th)} & V\textsubscript{DS}=V\textsubscript{GS}, I\textsubscript{D}=250µA & -- & -- & -- & V \\
 \hline
-Drain-Source On-Resistance & RDS(on) & VGS=10V, ID=xx A & -- & -- & -- & m$\Omega$ \\
+Drain-Source On-Resistance & R\textsubscript{DS(on)} & V\textsubscript{GS}=10V, I\textsubscript{D}=xx A & -- & -- & -- & m$\Omega$ \\
 \hline
-Gate Resistance & Rg & F=1 MHz, Open drain & -- & -- & -- & $\Omega$ \\
+Gate Resistance & R\textsubscript{g} & F=1 MHz, Open drain & -- & -- & -- & $\Omega$ \\
 \hline
 \multicolumn{7}{|l|}{\textbf{Diode Characteristics}} \\
 \hline
-Continuous Body Diode Current & IS & -- & -- & -- & -- & A \\
+Continuous Body Diode Current & I\textsubscript{S} & -- & -- & -- & -- & A \\
 \hline
-Diode Forward Voltage & VSD & VGS=0V, ID=xx A & -- & -- & -- & V \\
+Diode Forward Voltage & V\textsubscript{SD} & V\textsubscript{GS}=0V, I\textsubscript{D}=xx A & -- & -- & -- & V \\
 \hline
-Reverse Recovery Time & trr & IF=xx A, dIF/dt=xx A/µs & -- & -- & -- & ns \\
+Reverse Recovery Time & t\textsubscript{rr} & I\textsubscript{F}=xx A, dI\textsubscript{F}/dt=xx A/µs & -- & -- & -- & ns \\
 \hline
-Reverse Recovery Charge & Qrr & -- & -- & -- & -- & nC \\
+Reverse Recovery Charge & Q\textsubscript{rr} & -- & -- & -- & -- & nC \\
 \hline
 \multicolumn{7}{|l|}{\textbf{Dynamic Characteristics}} \\
 \hline
-Input Capacitance & Ciss & VDS= xxV, VGS=0V, f=1MHz & -- & -- & -- & pF \\
+Input Capacitance & C\textsubscript{iss} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=0V, f=1MHz & -- & -- & -- & pF \\
 \hline
-Output Capacitance & Coss & -- & -- & -- & -- & pF \\
+Output Capacitance & C\textsubscript{oss} & -- & -- & -- & -- & pF \\
 \hline
-Reverse Transfer Capacitance & Crss & -- & -- & -- & -- & pF \\
+Reverse Transfer Capacitance & C\textsubscript{rss} & -- & -- & -- & -- & pF \\
 \hline
-Total Gate Charge & Qg & VDS= xxV, VGS=xxV, ID=xx A & -- & -- & -- & nC \\
+Total Gate Charge & Q\textsubscript{g} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=xxV, I\textsubscript{D}=xx A & -- & -- & -- & nC \\
 \hline
-Gate-Source Charge & Qgs & -- & -- & -- & -- & nC \\
+Gate-Source Charge & Q\textsubscript{gs} & -- & -- & -- & -- & nC \\
 \hline
-Gate-Drain Charge & Qgd & -- & -- & -- & -- & nC \\
+Gate-Drain Charge & Q\textsubscript{gd} & -- & -- & -- & -- & nC \\
 \hline
-Turn-On Delay Time & td(on) & VDD= xxV, VGS= xxV, RG=xx$\Omega$ & -- & -- & -- & ns \\
+Turn-On Delay Time & t\textsubscript{d(on)} & V\textsubscript{DD}= xxV, V\textsubscript{GS}= xxV, R\textsubscript{G}=xx$\Omega$ & -- & -- & -- & ns \\
 \hline
-Turn-On Rise Time & tr & -- & -- & -- & -- & ns \\
+Turn-On Rise Time & t\textsubscript{r} & -- & -- & -- & -- & ns \\
 \hline
-Turn-Off Delay Time & td(off) & -- & -- & -- & -- & ns \\
+Turn-Off Delay Time & t\textsubscript{d(off)} & -- & -- & -- & -- & ns \\
 \hline
-Turn-Off Fall Time & tf & -- & -- & -- & -- & ns \\
+Turn-Off Fall Time & t\textsubscript{f} & -- & -- & -- & -- & ns \\
 \hline
 \end{tabularx}
 \end{center}
