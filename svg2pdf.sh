@@ -15,7 +15,10 @@ fi
 for svg in "${svgs[@]}"; do
   pdf="${svg%.svg}.pdf"
   echo "Converting $svg -> $pdf"
-  inkscape "$svg" --export-type=pdf --export-filename="$pdf"
+  # Filter Inkscape's harmless "unsupported target 0" stderr noise while
+  # preserving inkscape's own exit status (process substitution, not a pipe).
+  inkscape "$svg" --export-type=pdf --export-filename="$pdf" \
+    2> >(grep -vE 'unsupported target|^[[:space:]]*$' >&2 || true)
 done
 
 echo "Done: ${#svgs[@]} file(s) converted."
