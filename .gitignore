@@ -4,4 +4,7 @@ build/
 *.log
 *.pdf
 *.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 .env
