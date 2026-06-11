@@ -1,2 +1,6 @@
 build/
 *.Identifier
+*.aux
+*.log
+*.pdf
+*.out
