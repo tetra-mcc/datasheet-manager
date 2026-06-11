@@ -75,7 +75,7 @@ V\textsubscript{DS} & 100V \\
 \hline
 I\textsubscript{D} @T\textsubscript{C}=25$^\circ$C & 25A \\
 \hline
-R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} 33m$\Omega$ @ V\textsubscript{GS} = 10V \\
+R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} 33m$\Omega$ @ V\textsubscript{GS}=10V \\
 \hline
 \end{tabularx}
 \end{center}
@@ -124,8 +124,8 @@ R\textsubscript{DS(on)} Max & R\textsubscript{DS(on)} 33m$\Omega$ @ V\textsubscr
 \begin{itemize}
 \item Package: DFN5060
 \item Moisture Sensitivity: Level 1, per J-STD-020
-\item Halogen Free. ``Green'' Device \textsuperscript{(Note1)}
-\item Lead Free Finish, RoHS Compliant \textsuperscript{(Note2)}
+\item Halogen Free. ``Green'' Device \textsuperscript{(Note 1)}
+\item Lead Free Finish, RoHS Compliant \textsuperscript{(Note 2)}
 \item Epoxy Meets UL 94 V-0 Flammability Rating
 \item Weight: 25.0 g (approximate)
 \end{itemize}
@@ -171,29 +171,31 @@ For packaging details, visit our website at \underline{\href{https://www.mccsemi
 % PAGE 2
 \newpage
 
-\sectiontitle{Maximum Ratings (TA=25$^\circ$C unless otherwise specified)}
+\sectiontitle{Maximum Ratings (T\textsubscript{A}=25$^\circ$C unless otherwise specified)}
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|P{2.1361}|P{1.0264}|Q{0.5118}|Q{0.8540}|Q{0.4715}|}
+\begin{tabularx}{\linewidth}{|P{2.4}|P{1.0}|Q{0.51}|Q{0.80}|Q{0.29}|}
 \hline
 \rowcolor{tableheader} \multicolumn{2}{|l|}{\textbf{Parameter}} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
-Drain-Source Voltage & & V\textsubscript{DS} & EnterV\textsubscript{DS} & V \\
+\multicolumn{2}{|l|}{Drain-Source Voltage} & V\textsubscript{DS} & 100 & V \\
 \hline
-Gate-Source Voltage & & V\textsubscript{GS} & ±xx & V \\
+\multicolumn{2}{|l|}{Gate-Source Voltage} & V\textsubscript{GS} & ±20 & V \\
 \hline
-Continuous Drain Current & T\textsubscript{A}=25$^\circ$C, V\textsubscript{GS}=10V & I\textsubscript{D} & xx & A \\
+\multirow{2}{=}{Continuous Drain Current} & T\textsubscript{C}=25$^\circ$C, V\textsubscript{GS}=10V & \multirow{2}{*}{I\textsubscript{D}} & 25 & \multirow{2}{*}{A} \\
+\cline{2-2}\cline{4-4}
+ & T\textsubscript{C}=100$^\circ$C, V\textsubscript{GS}=10V & & 18 & \\
 \hline
-Pulsed Drain Current \textsuperscript{(Note 5)} & & I\textsubscript{DM} & xx & A \\
+\multicolumn{2}{|l|}{Pulsed Drain Current \textsuperscript{(Note 3)}} & I\textsubscript{DM} & xx & A \\
 \hline
-Total Power Dissipation & T\textsubscript{A}=25$^\circ$C, V\textsubscript{GS}=10V & P\textsubscript{D} & xx & W \\
+\multicolumn{2}{|l|}{Total Power Dissipation \textsuperscript{(Note 4)}} & P\textsubscript{D} & 53 & W \\
 \hline
-Single Pulsed Avalanche Energy & & E\textsubscript{AS} & xx & mJ \\
-\hline
+Single Pulsed Avalanche Energy & \multirow{2}{=}{T\textsubscript{J}=25$^\circ$C, V\textsubscript{DD}=80V, V\textsubscript{GS}=10V, R\textsubscript{G}=25$\Omega$, L=0.5mH} & E\textsubscript{AS} & 25 & mJ \\
+\cline{1-1}\cline{3-5}
 Avalanche Current & & I\textsubscript{AS} & xx & A \\
 \hline
-Operating Junction and Storage Temperature Range & & T\textsubscript{J}, T\textsubscript{STG} & -55 to +xxx & $^\circ$C \\
+\multicolumn{2}{|l|}{Operating Junction and Storage Temperature Range} & T\textsubscript{J}, T\textsubscript{STG} & -55 to +175 & $^\circ$C \\
 \hline
 \end{tabularx}
 \end{center}
@@ -204,13 +206,13 @@ Operating Junction and Storage Temperature Range & & T\textsubscript{J}, T\texts
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|P{2.5302}|Q{0.4095}|Q{0.6832}|Q{0.3772}|}
+\begin{tabularx}{\linewidth}{|P{2.74}|Q{0.40}|Q{0.63}|Q{0.23}|}
 \hline
 \rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Rating} & \textbf{Unit} \\
 \hline
-Thermal Resistance from Junction to Ambient \textsuperscript{(Note 5)} & R\textsubscript{$\theta$JA} & xx & $^\circ$C/W \\
+Thermal Resistance from Junction to Ambient \textsuperscript{(Note 5)} & R\textsubscript{$\theta$JA} & 50 & $^\circ$C/W \\
 \hline
-Thermal Resistance from Junction to Case & R\textsubscript{$\theta$JC} & xx & $^\circ$C/W \\
+Thermal Resistance from Junction to Case & R\textsubscript{$\theta$JC} & 2.8 & $^\circ$C/W \\
 \hline
 \end{tabularx}
 \end{center}
@@ -233,7 +235,7 @@ Notes:
 % PAGE 3
 \newpage
 
-\sectiontitle{Electrical Characteristics (TA=25$^\circ$C unless otherwise specified)}
+\sectiontitle{Electrical Characteristics (T\textsubscript{A}=25$^\circ$C unless otherwise specified)}
 
 \defaultsize
 \begin{center}
