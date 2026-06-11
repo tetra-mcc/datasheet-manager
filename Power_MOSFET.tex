@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{multirow}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash\hsize=#1\hsize}X}
@@ -19,6 +20,7 @@
 \definecolor{tableheader}{HTML}{BFBFBF}
 \definecolor{tableborder}{HTML}{999999}
 \arrayrulecolor{tableborder}
+\setlength{\arrayrulewidth}{0.75pt}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -229,7 +231,7 @@ Notes:
 
 \defaultsize
 \begin{center}
-\begin{tabularx}{\linewidth}{|P{2.1076}|Q{0.6658}|P{2.0201}|Q{0.5707}|Q{0.5707}|Q{0.5707}|Q{0.4946}|}
+\begin{tabularx}{\linewidth}{|P{2.33}|Q{0.58}|P{2.22}|Q{0.49}|Q{0.49}|Q{0.49}|Q{0.40}|}
 \hline
 \rowcolor{tableheader} \textbf{Parameter} & \textbf{Symbol} & \textbf{Test Conditions} & \textbf{Min} & \textbf{Typ} & \textbf{Max} & \textbf{Unit} \\
 \hline
@@ -243,7 +245,13 @@ Zero Gate Voltage Drain Current & I\textsubscript{DSS} & V\textsubscript{DS}= xx
 \hline
 Gate-Threshold Voltage & V\textsubscript{GS(th)} & V\textsubscript{DS}=V\textsubscript{GS}, I\textsubscript{D}=250µA & & & & V \\
 \hline
-Drain-Source On-Resistance & R\textsubscript{DS(on)} & V\textsubscript{GS}=10V, I\textsubscript{D}=xx A & & & & m$\Omega$ \\
+\multirow{4}{*}{Drain-Source On-Resistance} & \multirow{4}{*}{R\textsubscript{DS(on)}} & V\textsubscript{GS}=10V, I\textsubscript{D}=xx A & & & & \multirow{4}{*}{m$\Omega$} \\
+\cline{3-6}
+ & & V\textsubscript{GS}=4.5V, I\textsubscript{D}=xx A & & & & \\
+\cline{3-6}
+ & & V\textsubscript{GS}=2.5V, I\textsubscript{D}=xx A & & & & \\
+\cline{3-6}
+ & & V\textsubscript{GS}=1.8V, I\textsubscript{D}=xx A & & & & \\
 \hline
 Gate Resistance & R\textsubscript{g} & F=1 MHz, Open drain & & & & $\Omega$ \\
 \hline
@@ -253,31 +261,31 @@ Continuous Body Diode Current & I\textsubscript{S} & & & & & A \\
 \hline
 Diode Forward Voltage & V\textsubscript{SD} & V\textsubscript{GS}=0V, I\textsubscript{D}=xx A & & & & V \\
 \hline
-Reverse Recovery Time & t\textsubscript{rr} & I\textsubscript{F}=xx A, dI\textsubscript{F}/dt=xx A/µs & & & & ns \\
-\hline
+Reverse Recovery Time & t\textsubscript{rr} & \multirow{2}{*}{I\textsubscript{F}=xx A, dI\textsubscript{F}/dt=xx A/µs} & & & & ns \\
+\cline{1-2}\cline{4-7}
 Reverse Recovery Charge & Q\textsubscript{rr} & & & & & nC \\
 \hline
 \multicolumn{7}{|l|}{\textbf{Dynamic Characteristics}} \\
 \hline
-Input Capacitance & C\textsubscript{iss} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=0V, f=1MHz & & & & pF \\
+Input Capacitance & C\textsubscript{iss} & \multirow{3}{*}{V\textsubscript{DS}= xxV, V\textsubscript{GS}=0V, f=1MHz} & & & & \multirow{3}{*}{pF} \\
+\cline{1-2}\cline{4-6}
+Output Capacitance & C\textsubscript{oss} & & & & & \\
+\cline{1-2}\cline{4-6}
+Reverse Transfer Capacitance & C\textsubscript{rss} & & & & & \\
 \hline
-Output Capacitance & C\textsubscript{oss} & & & & & pF \\
+Total Gate Charge & Q\textsubscript{g} & \multirow{3}{*}{V\textsubscript{DS}= xxV, V\textsubscript{GS}=xxV, I\textsubscript{D}=xx A} & & & & \multirow{3}{*}{nC} \\
+\cline{1-2}\cline{4-6}
+Gate-Source Charge & Q\textsubscript{gs} & & & & & \\
+\cline{1-2}\cline{4-6}
+Gate-Drain Charge & Q\textsubscript{gd} & & & & & \\
 \hline
-Reverse Transfer Capacitance & C\textsubscript{rss} & & & & & pF \\
-\hline
-Total Gate Charge & Q\textsubscript{g} & V\textsubscript{DS}= xxV, V\textsubscript{GS}=xxV, I\textsubscript{D}=xx A & & & & nC \\
-\hline
-Gate-Source Charge & Q\textsubscript{gs} & & & & & nC \\
-\hline
-Gate-Drain Charge & Q\textsubscript{gd} & & & & & nC \\
-\hline
-Turn-On Delay Time & t\textsubscript{d(on)} & V\textsubscript{DD}= xxV, V\textsubscript{GS}= xxV, R\textsubscript{G}=xx$\Omega$ & & & & ns \\
-\hline
-Turn-On Rise Time & t\textsubscript{r} & & & & & ns \\
-\hline
-Turn-Off Delay Time & t\textsubscript{d(off)} & & & & & ns \\
-\hline
-Turn-Off Fall Time & t\textsubscript{f} & & & & & ns \\
+Turn-On Delay Time & t\textsubscript{d(on)} & \multirow{4}{*}{V\textsubscript{DD}= xxV, V\textsubscript{GS}= xxV, R\textsubscript{G}=xx$\Omega$} & & & & \multirow{4}{*}{ns} \\
+\cline{1-2}\cline{4-6}
+Turn-On Rise Time & t\textsubscript{r} & & & & & \\
+\cline{1-2}\cline{4-6}
+Turn-Off Delay Time & t\textsubscript{d(off)} & & & & & \\
+\cline{1-2}\cline{4-6}
+Turn-Off Fall Time & t\textsubscript{f} & & & & & \\
 \hline
 \end{tabularx}
 \end{center}
